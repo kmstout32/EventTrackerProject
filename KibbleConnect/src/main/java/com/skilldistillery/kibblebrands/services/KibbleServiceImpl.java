@@ -15,7 +15,9 @@ public class KibbleServiceImpl implements KibbleService{
 	private KibbleRepository kibbleRepo;
 	@Override
 	public List<Kibble> listAll() {
-		// TODO Auto-generated method stub
+		
+		System.out.println("***************");
+		System.out.println(kibbleRepo.findAll());
 		return kibbleRepo.findAll();
 	}
 

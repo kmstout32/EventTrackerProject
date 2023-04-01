@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 public class Brand {
 	@Id
@@ -20,6 +22,7 @@ public class Brand {
 	@Column(name="logo_url")
 	private String imageLogo;
 	
+	@JsonIgnore
 	@OneToMany(mappedBy = "brand")
 	private List<Kibble> kibbles;
 
