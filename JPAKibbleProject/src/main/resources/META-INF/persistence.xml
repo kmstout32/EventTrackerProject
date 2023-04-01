@@ -6,6 +6,7 @@
 		<!-- Define your entities- begin -->
 
 		<class>com.skilldistillery.kibblebrands.entities.Kibble</class>
+		<class>com.skilldistillery.kibblebrands.entities.Brand</class>
 		<!-- entities end -->
 		<properties>
 			<property name="javax.persistence.jdbc.url"

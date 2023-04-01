@@ -1,0 +1,3 @@
+rootProject.name = 'KibbleConnect'
+
+includeFlat 'JPAKibbleProject'

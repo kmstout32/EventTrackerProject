@@ -1,11 +1,18 @@
 package com.skilldistillery.kibblebrands.entities;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.Cache;
 @Entity
 public class Kibble {
 	@Id
@@ -13,7 +20,21 @@ public class Kibble {
 	private int id; 
 	
 	private String name;
+	
+	@Column(name = "kibble_url")
+	private String kibbleUrl;
+	
+	@Column(name = "date_created")
+	private LocalDate createDate;
+	
+	private String result;
+	
+	private String protein;
 
+	@ManyToOne
+	@JoinColumn(name = "brand_id" )
+	private Brand brand;
+	
 	public Kibble() {
 		super();
 	}
@@ -54,5 +75,45 @@ public class Kibble {
 	@Override
 	public String toString() {
 		return "Kibble [id=" + id + ", name=" + name + "]";
+	}
+
+	public String getKibbleUrl() {
+		return kibbleUrl;
+	}
+
+	public void setKibbleUrl(String kibbleUrl) {
+		this.kibbleUrl = kibbleUrl;
+	}
+
+	public LocalDate getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(LocalDate createDate) {
+		this.createDate = createDate;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+	public String getProtein() {
+		return protein;
+	}
+
+	public void setProtein(String protein) {
+		this.protein = protein;
+	}
+
+	public Brand getBrand() {
+		return brand;
+	}
+
+	public void setBrand(Brand brand) {
+		this.brand = brand;
 	}
 }

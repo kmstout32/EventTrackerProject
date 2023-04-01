@@ -49,4 +49,10 @@ public class KibbleTests {
 		assertNotNull(kibble);
 		assertEquals("Purina One", kibble.getName());
 	}
+	void test_kibble_join_to_brand_entity_mappings() {
+		assertNotNull(kibble);
+		assertNotNull(kibble.getBrand());
+		assertEquals(1, kibble.getBrand().getId());
+
+	}
 }
