@@ -1,6 +1,7 @@
 package com.skilldistillery.kibblebrands.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,36 +14,56 @@ public class KibbleServiceImpl implements KibbleService{
 
 	@Autowired
 	private KibbleRepository kibbleRepo;
+	
+//	----FIND KIBBLE LIST-----------------------------------------------------
 	@Override
 	public List<Kibble> listAll() {
 		
-		System.out.println("***************");
-		System.out.println(kibbleRepo.findAll());
 		return kibbleRepo.findAll();
 	}
+//	----FIND A KIBBLE-----------------------------------------------------
 
 	@Override
-	public Kibble getKibble(int kibbleId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Kibble getKibbleById(int kibbleId) {
+		
+		return kibbleRepo.findById(kibbleId);
 	}
+
+//	----ADD KIBBLE -----------------------------------------------------
 
 	@Override
 	public Kibble create(Kibble kibble) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return kibbleRepo.saveAndFlush(kibble);
+	
+		
 	}
+//	----UPDATE KIBBLE -----------------------------------------------------
 
 	@Override
 	public Kibble update(int kibbleId, Kibble kibble) {
-		// TODO Auto-generated method stub
+		Kibble existingKibble = kibbleRepo.findById(kibbleId);
+		if(existingKibble != null) {
+			existingKibble.setName(kibble.getName());
+			existingKibble.setCreateDate(kibble.getCreateDate());
+			existingKibble.setProtein(kibble.getProtein());
+			existingKibble.setKibbleUrl(kibble.getKibbleUrl());
+			existingKibble.setResult(kibble.getResult());
+			return kibbleRepo.saveAndFlush(existingKibble);
+		}
 		return null;
 	}
+//	----DELETE KIBBLE -----------------------------------------------------
 
 	@Override
 	public boolean deleteById(int kibbleId) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean deleted = false;
+		Kibble kibbleToDelete = kibbleRepo.findById(kibbleId);
+		if(kibbleToDelete != null) {
+			kibbleRepo.delete(kibbleToDelete);
+			deleted = true;
+		}
+		return deleted;
 	}
 
 }
