@@ -17,32 +17,39 @@ public class BrandServiceImpl implements BrandService {
 	
 	@Override
 	public List<Brand> listAll() {
-		// TODO Auto-generated method stub
 		return brandRepo.findAll();
 	}
 
 	@Override
-	public Brand getBrand(int brandId) {
-		// TODO Auto-generated method stub
-		return null;
+	public Brand getBrandById(int brandId) {
+		return brandRepo.findById(brandId);
 	}
 
 	@Override
 	public Brand create(Brand brand) {
-		// TODO Auto-generated method stub
-		return null;
+		return brandRepo.saveAndFlush(brand);
 	}
 
 	@Override
 	public Brand update(int brandId, Brand brand) {
-		// TODO Auto-generated method stub
+		Brand existingBrand = brandRepo.findById(brandId);
+		if(existingBrand != null) {
+			existingBrand.setName(brand.getName());
+			existingBrand.setImageLogo(brand.getImageLogo());
+			return brandRepo.saveAndFlush(null);
+		}
 		return null;
 	}
 
 	@Override
 	public boolean deleteById(int brandId) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean deleted = false;
+		Brand brandToDelete = brandRepo.findById(brandId);
+		if(brandToDelete != null) {
+			brandRepo.delete(brandToDelete);
+			deleted = true;
+		}
+		return deleted;
 	}
 
 
