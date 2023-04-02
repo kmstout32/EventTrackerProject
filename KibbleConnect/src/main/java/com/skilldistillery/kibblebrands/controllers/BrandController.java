@@ -57,7 +57,7 @@ public class BrandController {
 		return brand;
 	}
 	
-	@PutMapping("/{brandId}")
+	@PutMapping("brands/{brandId}")
 	public Brand updateBrand(@PathVariable Integer brandId,
 			@RequestBody Brand brand, HttpServletResponse res) {
 		try {

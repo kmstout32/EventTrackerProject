@@ -56,7 +56,7 @@ public class KibbleController {
 		return kibble;
 	}
 	
-	@PutMapping("/{kibbleId}")
+	@PutMapping("kibbles/{kibbleId}")
 	public Kibble updateKibble(@PathVariable Integer kibbleId,
 			@RequestBody Kibble kibble, HttpServletResponse res) {
 		try {
