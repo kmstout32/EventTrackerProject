@@ -12,13 +12,14 @@ This project is for dog owner's who would like to keep track of the different do
 | DELETE    | `/api/kibbles/11`   |              | |
 
 ## Technology used
-** REST api
-** Java
-** Eclipse
-** Spring Data
+**REST api
+**Java
+**Eclipse
+**Spring Data
+
 ## Lessons Learned
 	
-** Ensure that the table id's in the database are auto-incremented or your program will fail to create a new object. I knew that I needed this but failed to implement when needed until I read my console and was able to fix the issue quickly.
-** The service inferface works very similarly to a Data object analysis. However, the repository was the brains of the query operation. 
-** The idea of the repositories took me awhile to understand, but now I understand that the repositories are used to populate data memory from the database and how to implement one in my programs in the future.
+**Ensure that the table id's in the database are auto-incremented or your program will fail to create a new object. I knew that I needed this but failed to implement when needed until I read my console and was able to fix the issue quickly.
+**The service inferface works very similarly to a Data object analysis. However, the repository was the brains of the query operation. 
+**The idea of the repositories took me awhile to understand, but now I understand that the repositories are used to populate data memory from the database and how to implement one in my programs in the future.
 	
