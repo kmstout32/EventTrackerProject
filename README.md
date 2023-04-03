@@ -1,9 +1,9 @@
 # EventTrackerProject
 
 ## Description
-** This project is for dog owner's who would like to keep track of the different dog kibble they have tried. Personally, my dog has an auto-immune disease and is extremely sensitive to certain foods than others. This application allows the user to log the kibble, brand, and leave a review to remind them of what kibble did or didn't work out for the health of their dog.
+This project is for dog owner's who would like to keep track of the different dog kibble they have tried. Personally, my dog has an auto-immune disease and is extremely sensitive to certain foods than others. This application allows the user to log the kibble, brand, and leave a review to remind them of what kibble did or didn't work out for the health of their dog.
 
-	| HTTP Verb | URI                  | Request Body | Response Body |
+| HTTP Verb | URI                  | Request Body | Response Body |
 |-----------|----------------------|--------------|---------------|
 | GET       | `/api/kibbles`      |              | Collection of representations of all _kibble_ resources |collection** endpoint |
 | GET       | `/api/kibbles/1`   |              | Representation of _kibbles_ `1` |
