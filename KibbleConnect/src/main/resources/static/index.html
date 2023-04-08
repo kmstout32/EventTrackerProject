@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kibble Connect</title>
+<script type="text/javascript" src="js/script.js"></script>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<h1>Welcome to Kibble Connect</h1>
+<button  class="btn btn-success" name="lookup">View All</button>
+<div id="kibbleListDiv">
+	<h2>Kibble List</h2>
+	<table>
+		<thead>
+			<th>ID</th>
+			<th>Brand</th>
+			<th>Name</th>
+			<th>Protein</th>
+			<th>Date Logged</th>
+			<th>Results</th>
+			<th>Photo</th>
+			
+		</thead>
+			<tbody id="kibbleTableBody"></tbody>
+	</table>
+</div>
+
+<div id="newKibbleDiv">
+<!-- TODO new kibble form -->
+	<form name="newKibbleForm">
+		<!-- name, protein, date, result, photo -->
+		<label for="name">Name</label>
+		<input type="text" name="name"> <br>
+		<label for="protein">Protein</label>
+		<input type="text" name="protein"> <br>
+		<label for="createDate">Date</label>
+		<input type="date" name="createDate"> <br>
+		<label for="result">Result</label>
+		<input type="text" name="result" length="4"> <br>
+		<label for="kibbleUrl">Photo Url</label>
+		<input type="text" name="kibbleUrl"> <br>
+
+		<button class="btn btn-primary" name="addKibbleButton">Add Kibble</button>
+	</form>
+</div>
+
+<div id="kibbleDetails"></div>
+
+
+
+
+
+
+</body>
+</html>
