@@ -14,8 +14,11 @@ This project is for dog owner's who would like to keep track of the different do
 ## Technology used
 **REST api
 **Java
-**Eclipse
-**Spring Data
+**RESTful Services
+**Spring Data JPA
+**JavaScript
+**Visual Studio Code
+**XHRHttpRequest
 
 ## Lessons Learned
 	

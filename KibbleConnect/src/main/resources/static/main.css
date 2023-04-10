@@ -4,3 +4,28 @@
 	width: 40px;
 	height: 40px;
 }
+body {
+	background-color: #c3d4c1;
+}
+
+h1 {
+	color: 3c722c;
+	margin-left: 20px;
+	font-family: fantasy;
+}
+
+ th, td {
+  padding: 10px;
+  
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3c722c;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+}

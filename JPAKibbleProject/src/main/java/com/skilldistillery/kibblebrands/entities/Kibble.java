@@ -30,10 +30,6 @@ public class Kibble {
 	private String result;
 	
 	private String protein;
-
-	@ManyToOne
-	@JoinColumn(name = "brand_id" )
-	private Brand brand;
 	
 	public Kibble() {
 		super();
@@ -109,11 +105,5 @@ public class Kibble {
 		this.protein = protein;
 	}
 
-	public Brand getBrand() {
-		return brand;
-	}
 
-	public void setBrand(Brand brand) {
-		this.brand = brand;
-	}
 }
