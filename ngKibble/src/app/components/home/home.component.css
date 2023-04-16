@@ -1,0 +1,9 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+table{
+  border: solid;
+}
+form{
+  border: solid 3px;
+
+}
